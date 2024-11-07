@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ZENCAR: Car Website Template</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="fonts/fa/css/all.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style-global-blocks.css">
+		<link rel="stylesheet" href="style-global.css">
+		<link rel="stylesheet" href="style-responsive.css">
+		<script src="js/jquery.js"></script>
+		<style type="text/css">
+			video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Media queries para diferentes tamaños de pantalla */
+    @media (max-width: 1200px) {
+        video {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        video {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        video {
+            width: 100%;
+        }
+    }
+
+
+
+
+    #specs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;  /* Ajusta los márgenes según sea necesario */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;  /* Limita el ancho máximo de la sección */
+    padding: 0 20px;  /* Asegura que haya algo de espacio a los lados */
+}
+
+.specs_items {
+    display: flex;
+    justify-content: center;  /* Centra los items horizontalmente */
+    flex-wrap: wrap;  /* Permite que los items se acomoden en múltiples filas si es necesario */
+    gap: 30px;  /* Espaciado entre los items */
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos base para desktop */
+h2 {
+  font-size: 3.5em !important;
+  margin-bottom: 1em !important;
+  color: #333 !important;
+  font-weight: bold !important;
+  line-height: 1.2 !important;
+}
+
+h3 {
+  font-size: 2.8em !important;
+  color: #007bff !important;
+  margin-bottom: 0.8em !important;
+  line-height: 1.3 !important;
+}
+
+p {
+  font-size: 1.8em !important;
+  color: #555 !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1em !important;
+}
+
+/* Tablets (768px a 1024px) */
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 44px !important;
+  }
+  
+  h3 {
+    font-size: 32px !important;
+  }
+  
+  p {
+    font-size: 22px !important;
+  }
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media (max-width: 767px) {
+  h2 {
+    font-size: 40px !important;
+  }
+  
+  h3 {
+    font-size: 30px !important;
+  }
+  
+  p {
+    font-size: 20px !important;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 36px !important;
+  }
+  
+  h3 {
+    font-size: 28px !important;
+  }
+  
+  p {
+    font-size: 18px !important;
+  }
+}
+
+
+
+ .round-image:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el mouse */
+  }
+
+
+
+
+
+
+  /* Media query para pantallas más pequeñas (tabletas y dispositivos similares) */
+  @media (max-width: 768px) {
+    .round-image {
+      width: 120px !important;
+      height: 120px !important;
+    }
+  }
+
+  /* Media query para pantallas muy pequeñas (teléfonos) */
+  @media (max-width: 480px) {
+    .round-image {
+      width: 100px !important;
+      height: 100px !important;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .financial-dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-size: 2rem !important; /* Aumentado mucho más */
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    border: 1px solid #eaeaea;
+    font-size: 1.75rem !important; /* Aumentado mucho más */
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card-header {
+    padding: 1rem;
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+    color: white;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    font-size: 2rem !important; /* Aumentado mucho más */
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 2rem !important; /* Aumentado mucho más */
+    font-weight: bold !important;
+}
+
+.card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #ffffff;
+    font-size: 1.75rem !important; /* Aumentado mucho más */
+}
+
+.card-content.expanded {
+    max-height: 500px;
+}
+
+.content-inner {
+    padding: 1rem;
+    font-size: 1.75rem !important; /* Aumentado mucho más */
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem; /* Aumentado el padding */
+    margin: 0.5rem 0; /* Aumentado el margen */
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    font-size: 1.75rem !important; /* Aumentado mucho más */
+}
+
+.list-item:hover {
+    background-color: #f8f9fa;
+}
+
+.item-label {
+    font-weight: 500;
+    color: #374151;
+    font-size: 1.75rem !important; /* Aumentado mucho más */
+}
+
+.item-value {
+    color: #2563eb;
+    font-weight: 500;
+    font-size: 1.75rem !important; /* Aumentado mucho más */
+}
+
+.chevron {
+    transition: transform 0.3s ease;
+    font-size: 2rem !important; /* Aumentado mucho más */
+}
+
+.chevron.expanded {
+    transform: rotate(180deg);
+}
+
+.icon {
+    width: 48px !important; /* Aumentado mucho más */
+    height: 48px !important; /* Aumentado mucho más */
+}
+
+@media (max-width: 768px) {
+    .financial-dashboard {
+        padding: 15px; /* Aumentado el padding */
+        margin: 15px; /* Aumentado el margen */
+    }
+    
+    .card-title {
+        font-size: 2.75rem !important; /* Aumentado mucho más */
+    }
+    
+    .list-item {
+        flex-direction: column;
+        gap: 1rem; /* Aumentado el espacio entre elementos */
+    }
+    
+    .item-value {
+        align-self: flex-end;
+    }
+}
+
+
+
+
+/* Para pantallas pequeñas y tabletas */
+@media (max-width: 768px) {
+    .text-large {
+        font-size: 2rem !important; /* Aumentar el tamaño del texto */
+        font-weight: bold !important;
+        line-height: 1.4 !important; /* Mejorar la legibilidad */
+    }
+}
+
+/* Para pantallas más pequeñas, como móviles */
+@media (max-width: 480px) {
+    .text-large {
+        font-size: 3rem !important; /* Aumentar aún más el tamaño del texto */
+        font-weight: bold !important;
+        line-height: 1.5 !important; /* Mejorar la legibilidad */
+    }
+}
+
+
+
+   
+
+		</style>
+	</head>
+
+
+
+	<body id="home">
+		
+
+
+		<header class="p_fixed left top w_100 zindex_5 ts_0_5 dflex flex_wrap jc_sb ai_c">
+
+			<a href="#" class="logo">
+				<img src="images/logo-primary.png" alt="" class="logo-primary" />
+				<img src="images/logo-secondary.png" alt="" class="logo-secondary" />
+			</a>
+
+
+			<div class="headermenu">
+				<a href="javascript:void()" class="showmenu menucontrol"><i class="fa-solid fa-bars"></i></a>
+				<a href="javascript:void()" class="hidemenu menucontrol"><i class="fa-solid fa-times"></i></a>
+				<div class="navigation">
+					<nav id="headnav">
+						<ul class="fs_1_6_rem">
+							<li class="active"><a href="#home">Inicio</a></li>
+							<li><a href="#nosotros">Nosotros</a></li>
+							<li><a href="#proyectos">Proyectos</a></li>
+							<li><a href="#caracteristicas">Detalles</a></li>
+							<li><a href="#previa">Previa</a></li>
+							<li><a href="#verd">Carga Verde</a></li>
+
+							
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+		</header>
+		<!-- HEADER -->
+
+
+
+
+		<section class="banner f_l_w_100 pt_200 pb_150 pb_80_fhd pb_40_tablet aspectratio_16_8 aspectratio_16_18_mobile dflex flex_wrap js_fe ai_fe">
+			<div class="container">
+
+
+				<div class="text dflex flex_wrap jc_fs">
+					<h1 class="text_white fs_4_5_rem tt_u w_60">
+						Sol y limpieza en cada parada
+					</h1>
+				</div>
+				
+			</div>
+		</section>
+		<!-- BANNER -->
+
+
+
+
+
+
+		<section class="about f_l_w_100 ptb_300 ptb_125_fhd ptb_80_tablet" id="about">
+			<div class="container">
+				
+
+				<h2 class="fs_4_rem tt_u mb_125 mb_60_fhd mb_30_tablet" id="nosotros">Nosotros</h2>
+				<h4 class="fs_1_9_rem fs_16_tablet lh_200 mb_150 mb_60_fhd mb_30_tablet">
+					Este proyecto propone la creación de una red de gasolineras solares con autolavados inteligentes para vehículos eléctricos en México, aprovechando la creciente demanda de infraestructura sostenible. La empresa busca satisfacer esta necesidad empleando tecnologías avanzadas para recarga de vehículos y lavado automático, contribuyendo a la transición hacia un transporte ecológico y eficiente.<br><br> </h4>
+
+					<h2 class="fs_4_rem tt_u mb_125 mb_60_fhd mb_30_tablet" id="proyectos">Proyectos Similares</h2>
+
+					<h4 class="fs_1_9_rem fs_16_tablet lh_200 mb_150 mb_60_fhd mb_30_tablet">La iniciativa sigue la tendencia global hacia la sostenibilidad y tecnologías ecológicas, con la instalación de estaciones de carga eléctrica y autolavado automatizado, representando una oportunidad comercial en un mercado emergente. Tecnologías como la energía solar, inteligencia artificial y ahorro de agua respaldan la relevancia de la propuesta. Casos como Electrify America, con más de 3,500 cargadores rápidos y una reducción del 30% en costos operativos gracias a la energía solar, y Washworld Inc., con un ahorro de hasta el 85% en agua y un ROI de 2.5 años, demuestran el éxito en el sector. Wosh en España, con un 65% de reducción en tiempos de espera y un aumento del 45% en eficiencia energética, también resalta el potencial de la innovación tecnológica en estos servicios.
+				</h4>
+					<section class="image-section" style="display: flex; justify-content: center; align-items: center; padding: 20px;">
+  <div class="image-container" style="display: flex; gap: 20px;">
+    <img src="images/ame.jpg" alt="Imagen 1" class="round-image" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; transition: transform 0.3s ease;">
+    <img src="images/wawo.jpg" alt="Imagen 2" class="round-image" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; transition: transform 0.3s ease;">
+    <img src="images/espawo.jpg" alt="Imagen 3" class="round-image" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; transition: transform 0.3s ease;">
+  </div>
+</section>
+				
+
+			</div>
+
+
+		</section>
+
+		<!-- ABOUT -->
+
+	
+
+
+
+ 
+
+    <!-- Características del Proyecto -->
+  <section id="caracteristicas" style="padding: 50px 20px; text-align: center;">
+    <h2 style="font-size: 2.5em; margin-bottom: 0.5em; color: #333;">Características del Proyecto</h2>
+    
+    <div style="display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: 0 auto;">
+      
+      <div style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s; cursor: pointer;"
+           onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';"
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        <h3 style="font-size: 1.8em; color: #007bff;">Infraestructura Solar</h3>
+        <p style="font-size: 1.1em; color: #555;"> Por medio de esta se proporcionará
+energía limpia a las estaciones de carga y al autolavado, los cuales incluirán paneles
+solares y sistemas de almacenamiento para asegurar continuación de las operaciones.</p>
+      </div>
+      
+      <div style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s; cursor: pointer;"
+           onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';"
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        <h3 style="font-size: 1.8em; color: #007bff;">Autolavado Inteligente</h3>
+        <p style="font-size: 1.1em; color: #555;"> El sistema empleado incluirá sensores y algoritmos de IA para
+analizar las características del vehículo y sus niveles de suciedad y tamaños para ajustar
+los parámetros del lavado en tiempo real, lo que permitirá optimización de consumo de
+agua, energía y productos de limpieza</p>
+      </div>
+      
+      <div style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s; cursor: pointer;"
+           onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';"
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        <h3 style="font-size: 1.8em; color: #007bff;">Plataforma de Gestión</h3>
+        <p style="font-size: 1.1em; color: #555;">Conectar los sistemas
+operativos por medio de la implementación de la plataforma y permitir monitorización de
+consumos de energía y estados de los equipos en tiempo real a través de las decisiones
+operativas.
+</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Cumplimiento Normativo -->
+<section id="normativo" style="padding: 50px 20px; background-color: #e9f7ef; text-align: center;">
+  <h2 style="font-size: 2.5em; margin-bottom: 0.5em; color: #333;">Cumplimiento Normativo Ambiental y Energético</h2>
+  
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+    
+    <!-- Card 1: Ley de Transición Energética -->
+    <div style="flex: 1 1 300px; background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s; cursor: pointer; max-width: 300px;"
+         onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';"
+         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+      <h3 style="font-size: 1.8em; color: #007bff;">Ley de Transición Energética</h3>
+      <p style="font-size: 1.1em; color: #555;">Cumple con normas para promover el uso de energías limpias y reducir la dependencia de combustibles fósiles.</p>
+    </div>
+    
+    <!-- Card 2: Ley General del Equilibrio Ecológico -->
+    <div style="flex: 1 1 300px; background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s; cursor: pointer; max-width: 300px;"
+         onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';"
+         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+      <h3 style="font-size: 1.8em; color: #007bff;">Ley General del Equilibrio Ecológico</h3>
+      <p style="font-size: 1.1em; color: #555;">Asegura el respeto al medio ambiente a través del control de emisiones y el uso de tecnologías sustentables.</p>
+    </div>
+    
+    <!-- Card 3: Normas Técnicas de Instalaciones Solares -->
+    <div style="flex: 1 1 300px; background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s; cursor: pointer; max-width: 300px;"
+         onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';"
+         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+      <h3 style="font-size: 1.8em; color: #007bff;">Normas Técnicas de Instalaciones Solares</h3>
+      <p style="font-size: 1.1em; color: #555;">Estándares de instalación y mantenimiento que garantizan la eficiencia y seguridad de los sistemas solares.</p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Logística de Implementación -->
+  <section id="logistica" style="padding: 50px 20px; text-align: center;">
+    <h2 style="font-size: 2.5em; margin-bottom: 0.5em; color: #333;">Logística de Implementación</h2>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 10px; transition: transform 0.3s; cursor: pointer;"
+           onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';"
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        <h3 style="font-size: 1.8em; color: #007bff;">Preparación (3 meses)</h3>
+        <p style="font-size: 1.1em; color: #555;">Se comenzará con estudios exhaustivos de localización y terrenos, mientras se inician los trámites regulatorios necesarios, y se desarrolla el diseño preliminar. En el segundo mes, se adquirirá el terreno y se contratarán proveedores clave, mientras se desarrollan las especificaciones técnicas. En el tercer mes, se obtendrán los permisos iniciales y se finalizarán los diseños detallados, culminando con la aprobación del plan de construcción.</p>
+      </div>
+      <div style="padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 10px; transition: transform 0.3s; cursor: pointer;"
+           onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';"
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        <h3 style="font-size: 1.8em; color: #007bff;">Construcción (6 meses)</h3>
+        <p style="font-size: 1.1em; color: #555;">Los primeros dos meses se enfocarán en la preparación del terreno, instalación de infraestructura básica y trabajos de cimentación. Los siguientes dos meses se dedicarán a la instalación de paneles solares, la construcción del área de autolavado y la implementación de sistemas eléctricos. Los últimos dos meses de esta fase estarán destinados a la instalación de equipos de carga, sistemas de automatización y pruebas iniciales de los sistemas.</p>
+      </div>
+      <div style="padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s; cursor: pointer;"
+           onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';"
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        <h3 style="font-size: 1.8em; color: #007bff;">Puesta en Marcha (3 meses)</h3>
+        <p style="font-size: 1.1em; color: #555;">El primer mes se dedicará a pruebas integrales de sistemas, capacitación del personal y ajustes finales. El segundo mes incluirá pruebas con usuarios piloto, optimización de procesos y actividades de marketing pre-apertura. El último mes culminará con la apertura al público, monitoreo inicial y ajustes operativos necesarios.</p>
+      </div>
+    </div>
+  </section>
+
+ <!-- Presupuesto y Financiamiento -->
+<section id="presupuesto" style="padding: 50px 20px; background-color: #e9f7ef; text-align: center;">
+  <h2 style="font-size: 2.5em; margin-bottom: 0.5em; color: #333;">Presupuesto y Financiamiento</h2><br>
+  
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+    
+    <!-- Card 1: Inversión Total -->
+    <div style="flex: 1 1 300px; background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s; cursor: pointer; max-width: 300px;"
+         onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';"
+         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+      <h3 style="font-size: 1.8em; color: #007bff;">Inversión Total Estimada</h3>
+      <p style="font-size: 1.1em; color: #555;">La inversión por estación es de entre 4 y 5.5 millones de MXN, con un retorno estimado en 3-5 años.</p>
+    </div>
+    
+    <!-- Card 2: Plan de Financiamiento -->
+    <div style="flex: 1 1 300px; background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s; cursor: pointer; max-width: 300px;"
+         onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';"
+         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+      <h3 style="font-size: 1.8em; color: #007bff;">Plan de Financiamiento</h3>
+      <p style="font-size: 1.1em; color: #555;">Financiación propuesta: 40% capital propio, 35% crédito y 25% inversionistas estratégicos.</p>
+    </div>
+    
+    <!-- Card 3: Ingresos Estimados -->
+    <div style="flex: 1 1 300px; background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s; cursor: pointer; max-width: 300px;"
+         onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';"
+         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+      <h3 style="font-size: 1.8em; color: #007bff;">Ingresos Mensuales</h3>
+      <p style="font-size: 1.1em; color: #555;">Ingresos estimados de 600,000 MXN mensuales, con un margen operativo de 305,000 MXN.</p>
+    </div>
+
+
+
+  </div>
+
+
+</section><br><br>
+
+
+<h2 class="fs_4_rem tt_u mb_125 mb_60_fhd mb_30_tablet" style="text-align: center;">-</h2>
+ <div class="financial-dashboard">
+        <!-- Card Template -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    <span>Inversión Inicial</span>
+                </div>
+                <svg class="chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6"></path>
+                </svg>
+            </div>
+            <div class="card-content">
+                <div class="content-inner">
+                    <div class="list-item">
+                        <span class="item-label">Terreno e Infraestructura</span>
+                        <span class="item-value">2,000,000-3,000,000 MXN</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="item-label">Acondicionamiento</span>
+                        <span class="item-value">800,000 MXN</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="item-label">Equipamiento Solar y Carga</span>
+                        <span class="item-value">500,000-800,000 MXN</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="item-label">Autolavado Inteligente</span>
+                        <span class="item-value">300,000-500,000 MXN</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="item-label">Desarrollo Tecnológico</span>
+                        <span class="item-value">450,000 MXN</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="item-label">Capital de Trabajo</span>
+                        <span class="item-value">1,000,000 MXN</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Costos Operativos Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                    </svg>
+                    <span>Costos Operativos Mensuales</span>
+                </div>
+                <svg class="chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6"></path>
+                </svg>
+            </div>
+            <div class="card-content">
+                <div class="content-inner">
+                    <div class="list-item">
+                        <span class="item-label">Personal</span>
+                        <span class="item-value">180,000 MXN</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="item-label">Mantenimiento y servicios</span>
+                        <span class="item-value">70,000 MXN</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="item-label">Marketing</span>
+                        <span class="item-value">45,000 MXN</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proyección Financiera Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 6l-9.5 9.5-5-5L1 18"></path>
+                        <path d="M17 6h6v6"></path>
+                    </svg>
+                    <span>Proyección Financiera</span>
+                </div>
+                <svg class="chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6"></path>
+                </svg>
+            </div>
+            <div class="card-content">
+                <div class="content-inner">
+                    <div class="list-item">
+                        <span class="item-label">Ingresos Mensuales</span>
+                        <span class="item-value">600,000 MXN</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="item-label">Inversión Total</span>
+                        <span class="item-value">4,000,000-5,500,000 MXN</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="item-label">ROI Estimado</span>
+                        <span class="item-value">3-5 años</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Financiamiento Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    <span>Financiamiento</span>
+                </div>
+                <svg class="chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6"></path>
+                </svg>
+            </div>
+            <div class="card-content">
+                <div class="content-inner">
+                    <div class="list-item">
+                        <span class="item-label">Capital Propio</span>
+                        <span class="item-value">40%</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="item-label">Crédito Bancario</span>
+                        <span class="item-value">35%</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="item-label">Inversores</span>
+                        <span class="item-value">25%</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="item-label">Incentivos</span>
+                        <span class="item-value">Subsidios para energías renovables</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contingencia Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    <span>Contingencia</span>
+                </div>
+                <svg class="chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6"></path>
+                </svg>
+            </div>
+            <div class="card-content">
+                <div class="content-inner">
+                    <div class="list-item">
+                        <span class="item-label">Reserva del presupuesto anual</span>
+                        <span class="item-value">15%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<br><br><br><br><br><br><br>
+
+		
+
+
+
+
+<h2 class="fs_4_rem tt_u mb_125 mb_60_fhd mb_30_tablet" style="text-align: center;">-</h2>
+<h2 class="fs_4_rem tt_u mb_125 mb_60_fhd mb_30_tablet" style="text-align: center;" id="previa">Vista Previa</h2>
+
+
+
+
+
+<video autoplay loop muted controls>
+	
+    <source src="videos/energia.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+
+</video>
+<video autoplay loop muted controls>
+    <source src="videos/solar.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+
+</video><br><br><br><br><br><br><br><br>
+
+<!-- VIDEO BLOCK -->
+
+
+
+
+
+
+
+		<section class="imageblock f_l_w_100 pb_300 pb_125_fhd pb_70_tablet">
+			<div class="container dflex flex_wrap jc_sb">
+				
+
+				<div class="image w_45 w_100_mobile mb_40_mobile" >
+					<img src="images/redu.jpg" alt="" class="img_basic img_fit aspectratio_3_2"  style="border-radius: 22px;"/>
+				</div>
+
+				<div class="text w_45 w_100_mobile">
+					<h2 class="tt_u fs_4_rem mb_40 mb_20_tablet" id="verd">Propuesta del Modelado</h2>
+					<p class="fs_1_9_rem fs_13_tablet lh_200 mb_40 text_justify mb_20_tablet">
+						El diseño de las instalaciones ocupa 2,000 m², con 800 m² para carga (8 estaciones rápidas y 4 semi-rápidas), 400 m² para autolavado inteligente, 300 m² para área técnica y 500 m² para espacios comunes. Contará con 500 paneles solares, inversores de última generación y almacenamiento de 500kWh. Se incluirán sensores 3D en el autolavado, reciclaje de agua y AI, además de accesos independientes, sistema de colas optimizado y sostenibilidad con jardines verticales y pavimento permeable.
+					</p>
+					
+				</div>
+
+
+			</div>
+		</section>
+		<!-- IMG BLOCK -->
+
+
+
+
+
+
+		<section class="imageblock f_l_w_100 pb_300 pb_125_fhd pb_70_tablet">
+			<div class="container dflex flex_wrap jc_sb fd_rr">
+				
+
+				<div class="image w_45 w_100_mobile mb_40_mobile">
+					<img src="images/cam.jpg" alt="" class="img_basic img_fit aspectratio_3_2" style="border-radius: 22px;"/>
+				</div>
+
+				<div class="text w_45 w_100_mobile">
+					<h2 class="tt_u fs_4_rem mb_40 mb_20_tablet">Beneficios al Impacto Ambiental</h2>
+					<p class="fs_1_9_rem fs_13_tablet lh_200 mb_40 text_justify mb_20_tablet">
+						El proyecto reducirá 50 toneladas de CO₂ anuales por estación mediante energía renovable, ahorrará 1 millón de litros de agua al año con sistemas de autolavado automático y generará hasta 200 kW de energía limpia con paneles solares, evitando 200 toneladas de CO₂ anuales en comparación con los combustibles fósiles.
+					</p>
+					
+				</div>
+
+
+			</div>
+		</section>
+		<!-- IMG BLOCK -->
+
+
+
+
+		<section class="imageblock f_l_w_100 pb_300 pb_125_fhd pb_70_tablet">
+			<div class="container dflex flex_wrap jc_sb">
+				
+
+				<div class="image w_45 w_100_mobile mb_40_mobile" >
+					<img src="images/charts.jpg" alt="" class="img_basic img_fit aspectratio_3_2"  style="border-radius: 22px;"/>
+				</div>
+
+				<div class="text w_45 w_100_mobile">
+					<h2 class="tt_u fs_4_rem mb_40 mb_20_tablet">Análisis de Riesgos</h2>
+					<p class="fs_1_9_rem fs_13_tablet lh_200 mb_40 text_justify mb_20_tablet">
+						Los riesgos del proyecto incluyen la alta inversión inicial, que se mitiga con inversores y financiamiento verde; cambios regulatorios, que se manejan con asesoría legal y flexibilidad en el diseño; y fallas técnicas, que se previenen con mantenimiento, sistemas redundantes y personal capacitado.
+					</p>
+					
+				</div>
+
+
+			</div>
+		</section>
+		<!-- IMG BLOCK -->
+
+
+
+
+
+
+		<section class="imageblock f_l_w_100 pb_300 pb_125_fhd pb_70_tablet">
+			<div class="container dflex flex_wrap jc_sb fd_rr">
+				
+
+				<div class="image w_45 w_100_mobile mb_40_mobile">
+					<img src="images/marke.jpg" alt="" class="img_basic img_fit aspectratio_3_2" style="border-radius: 22px;"/>
+				</div>
+
+				<div class="text w_45 w_100_mobile">
+					<h2 class="tt_u fs_4_rem mb_40 mb_20_tablet">Estrategia Competitiva y de Marketing para Estaciones de Carga</h2>
+					<p class="fs_1_9_rem fs_13_tablet lh_200 mb_40 text_justify mb_20_tablet">
+						La competencia incluye estaciones de carga tradicionales y autolavados convencionales, con debilidades en tecnología y sostenibilidad. Las ventajas competitivas del proyecto son la integración de servicios, tecnología avanzada y sostenibilidad. La estrategia se enfoca en diferenciación, fidelización e innovación continua. El marketing se centra en concienciar sobre el impacto ambiental, atraer usuarios de vehículos eléctricos y posicionar la marca como líder en energía limpia. Las tácticas incluyen marketing digital, fidelización con una app, eventos y publicidad tradicional. Los resultados se medirán por adopción de servicios, retención y feedback.
+					</p>
+					
+				</div>
+
+
+			</div>
+		</section>
+		<!-- IMG BLOCK -->
+
+		
+
+
+
+
+		<footer class="f_l_w_100 ptb_175 ptb_100_fhd ptb_50_tablet">
+			<div class="container dflex flex_wrap jc_sb">
+				<div class="copyright fs_1_8_rem fs_15_tablet w_100_mobile">Copyright &copy; <span id="year"></span> <a href="#" class="border_none">ZENCAR.</a></div>
+				<div class="social fs_1_8_rem fs_15_tablet w_100_mobile mt_30_mobile">
+					<a href="#"><i class="fa-brands fa-facebook"></i></a>
+					<a href="#"><i class="fa-brands fa-twitter"></i></a>
+					<a href="#"><i class="fa-brands fa-instagram"></i></a>
+				</div>
+			</div>
+		</footer>
+		<!-- FOOTER -->
+
+
+
+		<script src="js/js-global-blocks.js"></script>
+		<script>
+			var menuid = '#headnav';
+			var gaptop = 135;
+			var scrollspeed = 1200;
+			var menu_active_class = 'active';
+		</script>	
+
+		    <script>
+        document.querySelectorAll('.card-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const chevron = header.querySelector('.chevron');
+                const isExpanded = content.classList.contains('expanded');
+                
+                // Toggle the expanded class
+                content.classList.toggle('expanded');
+                chevron.classList.toggle('expanded');
+            });
+        });
+    </script>
+		<script src="js/navjs.js"></script>
+	</body>
+</html>
+<!-- HTML -->
+<!-- Template By: LayoutFlow, URL: https://layoutflow.com/  -->
